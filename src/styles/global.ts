@@ -9,12 +9,20 @@ export const GlobalStyle = createGlobalStyle`
   :focus {
     outline: 0;
   }
+
   body {
+    background: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.text};
     -webkit-font-smoothing: antialiased;
   }
+
+  button {
+    cursor: pointer;
+  }
+
   body, input, textarea, button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-family: 'Roboto', sans-serif ;
+    font-weight: 400; 
     font-size: 1rem;
   }
 `

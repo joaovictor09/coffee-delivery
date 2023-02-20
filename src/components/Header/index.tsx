@@ -1,19 +1,22 @@
+import { MapPin, ShoppingCart } from 'phosphor-react'
 import { CartButton, HeaderContainer, LocaleButton } from "./styles";
 
-import Logo from '../../assets/coffee-delivery-logo.svg'
+import Logo from '../../assets/coffee-delivery-logo.svg';
+import { NavLink } from 'react-router-dom';
 
 export function Header() {
   return (
     <HeaderContainer>
-      <a href="">
+      <NavLink to="/">
         <img src={Logo} alt="" />
-      </a>
+      </NavLink>
       <div>
         <LocaleButton>
+          <MapPin weight='fill' size={22}/>
           Porto Alegre, RS
         </LocaleButton>
-        <CartButton>
-          Carrinho
+        <CartButton to="/checkout">
+          <ShoppingCart weight='fill' size={22}/>
         </CartButton>
       </div>
     </HeaderContainer>
